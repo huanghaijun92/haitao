@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import UI from './UI';
 import action from './action';
+import '@/styles/home.scss'
 
 const mapStateToProps = (state) => ({
   homeBannerlist: state.home.homeBannerlist,
-  homeProlist: state.home.homeProlist
+  homeProlist: state.home.homeProlist,
+  navlist: state.home.navlist
 })
 const mapDispatchToProps = (dispatch) => ({
   getHomeBannerlistData () {

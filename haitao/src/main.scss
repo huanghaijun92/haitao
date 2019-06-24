@@ -14,13 +14,13 @@ html, body, #root, .container {
     @include flexbox();
     @include flex-direction(column);
     .header {
-      @include rect(100%, .44rem);
-      @include background-color(#f66);
+      @include rect(100%, auto);
+      // @include background-color(#f66);
     }
     .content {
       @include flex();
       @include rect(100%, auto);
-      overflow: auto;
+      @include overflow(auto);
     }
   }
   .footer {
@@ -37,8 +37,80 @@ html, body, #root, .container {
         @include justify-content();
         @include align-items();
         @include text-color(#333);
-        &.active {
-          @include text-color(#f66);
+        &:nth-child(1){
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/home.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(2){
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/choose.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(3){
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/find.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(4){
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/cart.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(5){
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/user.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(1).active {
+          @include text-color(#38befb);
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/home1.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(2).active {
+          @include text-color(#38befb);
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/choose1.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(3).active {
+          @include text-color(#38befb);
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/find1.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(4).active {
+          @include text-color(#38befb);
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/cart1.png') no-repeat;
+            background-size: .22rem;
+          }
+        }
+        &:nth-child(5).active {
+          @include text-color(#38befb);
+          span {
+            @include rect(.22rem, .22rem);
+            background: url('./images/user1.png') no-repeat;
+            background-size: .22rem;
+          }
         }
       }
     }

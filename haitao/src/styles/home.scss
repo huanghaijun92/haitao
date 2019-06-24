@@ -1,0 +1,237 @@
+@import '@/lib/reset.scss';
+
+.box {
+  .hheader {
+    .hsearch {
+      @include rect(100%, auto);
+      @include flexbox();
+      .logo {
+        img {
+          @include rect(.22rem, .22rem);
+          margin: .2rem 0 0 .3rem;
+        }
+      }
+      .searchbar {
+        @include flex();
+        text-align: center;
+        margin: .14rem 0 .05rem 0;
+        .search {
+          border: 1px solid #ccc;
+          @include rect(2.1rem, .3rem);
+          background:url('../images/search.png') no-repeat .08rem .05rem;
+          background-size: .18rem;
+          border-radius: .05rem;
+        }
+       }
+      .userimg {
+        img {
+          @include rect(.22rem, .22rem);
+          margin: .2rem .38rem  0 0;
+        }
+      }
+    }
+    .hnav {
+      ul {
+        @include flexbox();
+        li {
+          margin-left: .15rem;
+          font-size: .14rem;
+          line-height: .28rem;
+          &:nth-child(1) {
+            margin: 0 .25rem;
+          }
+        }
+      }
+    }
+  }
+  .hcontent {
+    .banner {
+      @include rect(100%, 1.52rem);
+    }
+    .subnav {
+      ul {
+        @include flexbox();
+        margin-top: .12rem;
+        li {
+          @include flex();
+          @include flexbox();
+          @include flex-direction(column);
+          @include text-align(center);
+          i {
+            img {
+              @include rect(.42rem, .58rem);
+            }
+          }
+          span {
+            font: .13rem/.22rem '';
+          }
+        }
+      }
+    }
+    .odds {
+      margin-top: .16rem;
+      p {
+        text-align:center;
+        i {
+          font: 700 .18rem '';
+        }
+      }
+      ul {
+        @include flexbox();
+        margin-top: .16rem;
+        li {
+          @include flex();
+          @include text-align(center);
+          img {
+            @include rect(1rem, .74rem);
+          }
+        }
+      }
+    }
+    .recommendations {
+      margin:.22rem .2rem .08rem;
+      background: #fff7f7;
+      h2 {
+        @include flexbox();
+        margin: 0 .2rem;
+        span {
+          @include flex();
+          font:700 .16rem/.48rem '';
+        }
+        em {
+          font:700 .13rem/.48rem '';
+          i {
+
+          }
+        }
+      }
+      ul {
+        @include overflow(hidden);
+        padding-bottom: .14rem;
+        li {
+          float: left;
+          @include rect(50%, 1rem);
+          text-align: center;
+          margin-bottom: .12rem;
+          img {
+            @include rect(1.5rem, 1rem);
+          }
+        }
+      }
+    }
+    .subbanner {
+      @include rect(100%, .55rem);
+      img {
+        @include rect(100%, .55rem);
+      }
+    }
+    .hot {
+      margin: .12rem .2rem .28rem;
+      background: #fff7f7;
+      padding-bottom: .14rem;
+      h2 {
+        @include flexbox();
+        margin: 0 .2rem;
+        span {
+          @include flex();
+          font: 700 .16rem/.48rem '';
+        }
+        em {
+          font:700 .13rem/.48rem '';
+          i {
+
+          }
+        }
+      }
+      ul {
+        @include flexbox();
+        li {
+          @include flex();
+          @include text-align(center);
+          img {
+            @include rect(1rem, 1rem);
+          }
+        }
+      }
+    }
+    .timelimited {
+      background: #fff7f7;
+      margin:0 .2rem;
+      overflow: hidden;
+      .timebox {
+        margin: .06rem;
+        background: #fff;
+        border-radius: .06rem;
+        border: 1px solid rgba(231, 231, 231, .5);
+        border-top:0;
+        border-bottom: 2px solid rgba(231, 231, 231, .5);
+        h2 {
+          @include flexbox();
+          margin: 0 .2rem;
+          span {
+            @include flex();
+            font:700 .16rem/.48rem '';
+          }
+          em {
+            font:700 .13rem/.48rem '';
+            i {
+  
+            }
+          }
+        }
+        ul {
+          @include flexbox();
+          li {
+            @include flex();
+            @include text-align(center);
+            @include flexbox();
+            @include flex-direction(column);
+            img {
+              @include rect(.8rem, .7rem);
+            }
+            p {
+              font: .12rem '';
+            }
+            span {
+              font: .12rem '';
+              color: red;
+              margin-top: .14rem;
+            }
+            s {
+              font: .1rem '';
+              margin-bottom: .14rem;
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+    }
+    .health {
+      h2 {
+        margin: 0 .2rem;
+        font: 700 .16rem/.52rem '';
+      }
+      ul {
+        overflow: hidden;
+        li {
+          @include rect(50%, auto);
+          text-align: center;
+          float: left;
+          img {
+            @include rect(1.62rem, 1.08rem);
+          }
+          p.healthname {
+            text-align: center;
+            line-height: .3rem;
+          }
+          p.healthintro {
+            padding: 0 .1rem;
+            font: .12rem/.2rem '';
+            color: #9e9e9e;
+            @include rect(auto, .4rem);
+          }
+        }
+      }
+    }
+  }
+}
