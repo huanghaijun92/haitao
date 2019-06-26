@@ -7,6 +7,11 @@ class Com extends Component {
     this.props.getHomeProlistData();
   }
 
+  goSearch () {
+    // console.log(this.props)
+    this.props.history.push('/empty/search')
+  }
+
   render () {
     return (
       <div className = "box">
@@ -15,7 +20,7 @@ class Com extends Component {
             <div className = "logo">
               <img src={ require('@/images/scan.png') } alt=""/>
             </div>
-            <div className = "searchbar">
+            <div className = "searchbar" onClick={this.goSearch.bind(this)}>
               <input type="text" className="search" disabled/>
             </div>
             <div className = "userimg">

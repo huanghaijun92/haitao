@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '@/layout/App';
+import Empty from '@/layout/Empty';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './store';
@@ -11,6 +12,7 @@ ReactDOM.render(
 <Provider store = { store }>
   <HashRouter>
     <Switch>
+      <Route path = "/empty" component = { Empty } />
       <Route path = "/" component = { App } />
     </Switch>
   </HashRouter>

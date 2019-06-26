@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import UI from './UI';
-import action from './action';
-import '@/styles/home.scss'
+// import action from './action';
+import '@/styles/home.scss';
+import api from '@/api';
 
 const mapStateToProps = (state) => ({
   homeBannerlist: state.home.homeBannerlist,
@@ -10,12 +11,32 @@ const mapStateToProps = (state) => ({
 })
 const mapDispatchToProps = (dispatch) => ({
   getHomeBannerlistData () {
-    dispatch(action.getHomeBannerlistData)
+    api.reqGetData('banner').then(data => {
+      dispatch({
+        type: 'changeHomeBannerlist',
+        data
+      })
+    })
   },
   getHomeProlistData () {
-    dispatch(action.getHomeProlistData)
+    api.reqGetData('douban').then(data => {
+      dispatch({
+        type: 'changeHomeProlist',
+        data
+      })
+    })
   }
 })
+
+
+// const mapDispatchToProps = (dispatch) => ({
+//   getHomeBannerlistData () {
+//     dispatch(action.getHomeBannerlistData)
+//   },
+//   getHomeProlistData () {
+//     dispatch(action.getHomeProlistData)
+//   }
+// })
 
 const Com = connect(mapStateToProps, mapDispatchToProps)(UI)
 
