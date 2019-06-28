@@ -25,7 +25,7 @@ html, body, #root, .container {
   }
   .footer {
     @include rect(100%, .5rem);
-    @include background-color(#efefef);
+    @include background-color(#fff);
     ul {
       @include rect(100%, 100%);
       @include flexbox();
@@ -112,6 +112,9 @@ html, body, #root, .container {
             background-size: .22rem;
           }
         }
+      }
+      p {
+        font-size: .1rem;
       }
     }
   }

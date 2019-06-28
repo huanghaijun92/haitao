@@ -6,10 +6,10 @@ const Com = ({ bannerlist }) => (
     autoplay
     infinite
     dots={false}
-    style={{ display: 'inline-block', width: '100%', height: 152 }}>
+    style={{ display: 'inline-block', width: '100%', height: '1.52rem' }}>
     {bannerlist.map((val, index) => (
       <a key={index} href="http://www.alipay.com" style={{ display: 'inline-block', width: '100%' }} >
-        <img src={'http://www.daxunxun.com' + val} alt="" style={{ width: '100%', height: 152, verticalAlign: 'top' }} />
+        <img src={'http://www.daxunxun.com' + val} alt="" style={{ width: '100%', height: '1.52rem', verticalAlign: 'top' }} />
       </a>
     ))}
   </Carousel>

@@ -1,0 +1,145 @@
+@import '@/lib/reset.scss';
+
+.box {
+  .uheader {
+    background: #37BEFC;
+    .utitle {
+      @include rect(100%, auto);
+      overflow: hidden;
+      line-height: .5rem;
+      color: #fff;
+      span {
+        font-size: .17rem;
+        // font-weight: 700;
+        float:left;
+        margin-left: 1.7rem;
+      }
+      i {
+        float:right;
+        margin-right: .2rem;
+        font-size: .14rem;
+      }
+    }
+    .usermsg {
+      @include flexbox();
+      img {
+        margin-left: .12rem;
+      }
+      .username {
+        margin-left: .1rem;
+        color: #fff;
+        p.uname {
+          font-size: .16rem;
+        }
+        p.utel {
+          font-size: .14rem;
+        }
+
+      }
+    }
+    .unav {
+      color: #fff;
+      margin-top: .1rem;
+      ul {
+        @include flexbox();
+        padding-bottom: .05rem;
+        li {
+          @include flex();
+          text-align:center;
+          @include flexbox();
+          @include flex-direction(column);
+        }
+      }
+
+    }
+  }
+  .ucontent {
+    background: #F2F2F2;
+    .order {
+      background: #fff;
+      margin: .2rem .12rem;
+      border-radius: .08rem;
+      p {
+        @include flexbox();
+        @include justify-content(space-between);
+        border-bottom: .01rem solid #F2F2F2;
+        span {
+          font-size: .14rem;
+          line-height: .3rem;
+          margin-left: .1rem;
+        }
+        em {
+          font-size: .12rem;
+          line-height: .3rem;
+          margin-right: .1rem;
+          i {
+            margin-left: .05rem;
+            img {
+              @include rect(.05rem, .09rem);
+            }
+          }
+        }
+      }
+      ul {
+        @include flexbox();
+        padding: .08rem 0;
+        li {
+          @include flex();
+          @include flexbox();
+          @include flex-direction(column);
+          @include align-items(center);
+          img {
+            @include rect(.29rem, .24rem);
+          }
+          span {
+            font-size: .12rem;
+            margin-top: .05rem;
+          }
+        }
+      }
+    }
+  }
+  .userlist {
+    background: #fff;
+    margin:.26rem .12rem;
+    border-radius: .08rem;
+    ul {
+      li {
+        @include flexbox();
+        @include justify-content(space-between);
+        padding: .08rem;
+        border-bottom: 1px solid #F2F2F2;
+        span {
+
+        }
+        i {
+          img {
+            @include rect(.06rem, .14rem);
+          }
+        }
+      }
+    }
+  }
+  .set {
+    background: #fff;
+    margin:.28rem .12rem;
+    border-radius: .08rem;
+    ul {
+      li {
+        @include flexbox();
+        @include justify-content(space-between);
+        padding: .08rem;
+        border-bottom: 1px solid #F2F2F2;
+        span {
+
+        }
+        i {
+          img {
+            @include rect(.06rem, .14rem);
+          }
+        }
+      }
+    }
+  }
+
+}

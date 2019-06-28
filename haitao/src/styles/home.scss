@@ -1,7 +1,9 @@
 @import '@/lib/reset.scss';
 
 .box {
+  background: #F5F1F1;
   .hheader {
+    background: #37BEFC;
     .hsearch {
       @include rect(100%, auto);
       @include flexbox();
@@ -14,13 +16,15 @@
       .searchbar {
         @include flex();
         text-align: center;
-        margin: .14rem 0 .05rem 0;
+        margin: .2rem 0 .05rem 0;
         .search {
-          border: 1px solid #ccc;
-          @include rect(2.1rem, .3rem);
-          background:url('../images/search.png') no-repeat .08rem .05rem;
-          background-size: .18rem;
-          border-radius: .05rem;
+          // border: 1px solid #ccc;
+          border:0;
+          @include rect(2.4rem, .24rem);
+          background:#67cbfa url('../images/search.png') no-repeat .08rem .05rem;
+          background-size: .14rem;
+          border-radius: .2rem;
+          padding-left: .3rem;
         }
       }
       .userimg {
@@ -49,6 +53,9 @@
       @include rect(100%, 1.52rem);
     }
     .subnav {
+      background: #fff;
+      margin: .12rem .12rem;
+      padding: .06rem 0;
       ul {
         @include flexbox();
         margin-top: .12rem;
@@ -69,7 +76,9 @@
       }
     }
     .odds {
-      margin-top: .16rem;
+      background: #fff;
+      margin: .16rem .12rem 0;
+      padding:.1rem 0 .2rem;
       p {
         text-align:center;
         i {
@@ -89,7 +98,7 @@
       }
     }
     .recommendations {
-      margin:.22rem .2rem .08rem;
+      margin:.22rem .12rem .08rem;
       background: #fff7f7;
       h2 {
         @include flexbox();
@@ -126,7 +135,7 @@
       }
     }
     .hot {
-      margin: .12rem .2rem .28rem;
+      margin: .12rem .12rem .28rem;
       background: #fff7f7;
       padding-bottom: .14rem;
       h2 {
@@ -156,7 +165,7 @@
     }
     .timelimited {
       background: #fff7f7;
-      margin:0 .2rem;
+      margin:0 .12rem;
       overflow: hidden;
       .timebox {
         margin: .06rem;
@@ -207,6 +216,8 @@
       }
     }
     .health {
+      background: #fff;
+      margin: .1rem .12rem .06rem;
       h2 {
         margin: 0 .2rem;
         font: 700 .16rem/.52rem '';

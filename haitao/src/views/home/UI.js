@@ -21,7 +21,7 @@ class Com extends Component {
               <img src={ require('@/images/scan.png') } alt=""/>
             </div>
             <div className = "searchbar" onClick={this.goSearch.bind(this)}>
-              <input type="text" className="search" disabled/>
+              <input type="text" className="search" disabled placeholder="999感冒灵限时包邮秒杀"/>
             </div>
             <div className = "userimg">
               <img src={ require('@/images/msg.png') } alt=""/>
